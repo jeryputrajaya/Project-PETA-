@@ -1,15 +1,13 @@
-/* =====================================================
-   VARIABEL WARNA DINAMIS & RESET
-===================================================== */
+/* VARIABEL WARNA DINAMIS*/
 @property --hue { syntax: '<number>'; inherits: true; initial-value: 210; }
 
 :root {
-  --hue: 210; /* Nilai default (Biru Langit) */
+  --hue: 210; /* Warna Normal (Biru Langit) */
   --sat: 55%;
   --spd: 1.6s;
   --ease: cubic-bezier(0.45, 0, 0.15, 1);
 
-  /* Palet Warna Otomatis menyesuaikan nilai --hue */
+  /* kode Warna Otomatis untuk menyesuaikan \ --hue */
   --bg:         hsl(var(--hue), 28%, 97%);
   --bg2:        hsl(var(--hue), 22%, 93%);
   --surface:    hsl(var(--hue), 30%, 100%);
@@ -44,9 +42,7 @@ body {
   line-height: 1.6;
 }
 
-/* =====================================================
-   BACKGROUND ORBS (Animasi Cahaya Belakang)
-===================================================== */
+/*(Animasi Cahaya Belakang) */
 .bg-orbs { position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
 .orb { position: absolute; border-radius: 50%; filter: blur(110px); opacity: 0.38; animation: drift 22s ease-in-out infinite; }
 .orb-1 { width: 45vw; height: 45vw; top: -10%; left: -10%; background: var(--orb-a); }
@@ -59,9 +55,7 @@ body {
   66% { transform: translate(-32px,26px) scale(0.93); }
 }
 
-/* =====================================================
-   NAVIGASI (DESKTOP / LAPTOP LAYOUT)
-===================================================== */
+/* NAVIGASI (DESKTOP / LAPTOP LAYOUT) */
 .wrapper { position: relative; z-index: 1; }
 nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 999;
@@ -73,7 +67,7 @@ nav {
   box-shadow: 0 4px 30px rgba(0,0,0,0.03);
 }
 
-/* Penyesuaian khusus untuk Logo Gambar */
+/* Penyesuaian Logo */
 .nav-logo { 
   display: flex; 
   align-items: center; 
@@ -360,9 +354,7 @@ nav {
 .hamburger { display: none; flex-direction: column; gap: 6px; background: none; border: none; cursor: pointer; z-index: 1000; padding: 10px; }
 .hamburger span { display: block; width: 28px; height: 3px; border-radius: 3px; background-color: var(--dark); transition: 0.3s ease; }
 
-/* =====================================================
-   HERO SECTION (BERANDA ATAS)
-===================================================== */
+/* HERO SECTION (BERANDA ATAS) */
 .hero { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 120px 5% 80px; position: relative; }
 .hero-eyebrow { padding: 8px 22px; border-radius: 99px; background: var(--accent-dim); color: var(--accent); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 24px; animation: fadeUp 0.7s ease both; border: 1px solid var(--accent-lt); }
 .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.8rem, 6vw, 5.5rem); line-height: 1.1; font-weight: 700; max-width: 900px; margin-bottom: 24px; animation: fadeUp 0.85s 0.08s ease both; }
@@ -377,9 +369,7 @@ nav {
 .btn-outline { background: transparent; color: var(--accent); border: 2px solid var(--accent-lt); }
 .btn-outline:hover { background: var(--accent-dim); transform: translateY(-3px); }
 
-/* =====================================================
-   STRUKTUR KONTEN UMUM (SECTION & GRID)
-===================================================== */
+/* STRUKTUR KONTEN UMUM (SECTION & GRID) */
 section { padding: 100px 5%; }
 .inner { max-width: 1200px; margin: 0 auto; }
 
@@ -419,7 +409,7 @@ section { padding: 100px 5%; }
 .card h3, .hcard-name, .hcard2 h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 700; margin-bottom: 12px; color: var(--dark); }
 .card p, .hcard-desc, .hcard2 p { font-size: 0.95rem; color: var(--mid); }
 
-/* AKAR MASALAH (Layout Kiri-Kanan) */
+/*(Layout Kiri-Kanan) */
 .akar-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: stretch; }
 .dark-card { 
   background: linear-gradient(135deg, var(--dark), hsl(var(--hue), 40%, 20%)); 
@@ -430,7 +420,7 @@ section { padding: 100px 5%; }
 .dark-card cite { color: var(--accent-lt); font-size: 0.9rem; font-style: normal; letter-spacing: 0.1em; text-transform: uppercase; }
 .dark-card p, .dark-card h4 { color: #fff; }
 
-/* TAB SOLUSI */
+/* tab solusi*/
 .tab-container { background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.02); }
 .tab-row { display: flex; gap: 12px; margin-bottom: 30px; border-bottom: 2px solid var(--bg2); padding-bottom: 15px; flex-wrap: wrap; }
 .tab-btn { padding: 12px 28px; border-radius: 99px; border: none; background: var(--bg2); color: var(--mid); font-weight: 600; cursor: pointer; transition: 0.3s; font-size: 0.95rem; }
@@ -443,7 +433,7 @@ section { padding: 100px 5%; }
 .sol-ico { width: 60px; height: 60px; border-radius: 15px; background: var(--surface); display: flex; align-items: center; justify-content: center; font-size: 1.8rem; flex-shrink: 0; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
 .sol-desc strong { display: block; font-size: 1.1rem; margin-bottom: 5px; color: var(--dark); }
 
-/* BANTUAN DARURAT (Mode Gelap) */
+/* bantuan darurat */
 #bantuan { background: linear-gradient(148deg, hsl(var(--hue), 60%, 12%), hsl(calc(var(--hue)+20), 50%, 20%)); position: relative; }
 #bantuan .sec-title { color: #28273d; }
 #bantuan .sec-label { color: var(--accent-lt); }
@@ -472,9 +462,7 @@ footer { background: hsl(var(--hue), 40%, 8%); color: rgba(157, 157, 157, 0.5); 
 .reveal.visible { opacity: 1; transform: translateY(0); }
 
 
-/* =====================================================
-   RESPONSIF KHUSUS HP & TABLET (Layar dibawah 860px)
-===================================================== */
+/* RESPONSIF KHUSUS HP & TABLET (Layar dibawah 860px)*/
 @media (max-width: 860px) {
   
   /* Aktifkan Hamburger */

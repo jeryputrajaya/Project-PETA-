@@ -1,8 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-  // ==========================================
-  // 1. FITUR MENU HAMBURGER (KHUSUS LAYAR HP)
-  // ==========================================
+  // 1. FITUR MENU HAMBURGER (KHUSUS LAYAR HP)// 
   const hamburger = document.getElementById('hamburger');
   const navContent = document.getElementById('nav-content');
   const navLinksList = document.querySelectorAll('.nav-links a');
@@ -21,9 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // ==========================================
-  // 2. FITUR COLOR SWITCHER (Ubah Tema Warna)
-  // ==========================================
+  // 2. FITUR COLOR SWITCHER (Ubah Tema Warna) 
   const colorDots = document.querySelectorAll('.color-dot');
   const root = document.documentElement; // Mengakses elemen :root di CSS
 
@@ -41,9 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // ==========================================
-  // 3. FITUR TAB (Berpindah Konten Solusi)
-  // ==========================================
+  // 3. fitur tab (Berpindah Konten Solusi) //
   const tabBtns = document.querySelectorAll('.tab-btn');
   const tabPanes = document.querySelectorAll('.tab-pane');
 
@@ -62,9 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // ==========================================
-  // 4. FITUR SCROLL REVEAL (Efek Muncul Perlahan)
-  // ==========================================
+  // 4. FITUR SCROLL REVEAL (Efek Muncul Perlahan)// 
   const revealElements = document.querySelectorAll('.reveal');
   
   // Menggunakan IntersectionObserver agar ringan di HP
